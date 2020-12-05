@@ -9,7 +9,7 @@ Discussion and collaboration is taking place in the [bitcoin design Slack](https
 
 ## Table of Contents
 
-- [Objective](#objective)
+- [Goal](#goal)
 - [Process](#process)
 - [Guide Content](#guide-content)
 - [Run Locally](#run-locally)
@@ -163,7 +163,6 @@ An initial outline that will be updated as needed:
 
 
 Version 1 of this doc [can be found here](https://docs.google.com/document/d/1omAxwvCSRlo_u5UL3ThTXFhNccDuN7GJOi4RlZfk--w/edit#heading=h.75nvyav1r98b) for reference.
-
 
 ---
 
