@@ -33,11 +33,6 @@ We only use this as an example because to make it easier to communicate the capa
 
 Below we explore the structure and lifecycle of an on-chain bitcoin transaction.
 
-```mermaid
-graph LR
-	1(Reason) --> 2(Invoice Creation) --> 3(Transaction Creation) --> 4(Transaction Processing) --> 5(First Confirmation) --> 6(More Blocks Generated)
-```
-
 ---
 
 #### [Funding a transaction](#)
@@ -93,7 +88,7 @@ At this point the transaction is not yet confirmed — we say the transaction is
 
 #### [Speeding Up / Canceling](#)
 
-While in the mempool — its possible to speed up the transaction or even cancel it. Not all transactions can do this — an option called "Replace by Fee" needs to be turned on before the transaction is broadcasted.
+While in the mempool — it's possible to speed up the transaction or even cancel it. Not all transactions can do this — an option called "Replace by Fee" needs to be turned on before the transaction is broadcasted.
 
 ---
 
