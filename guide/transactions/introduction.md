@@ -21,11 +21,15 @@ image: /assets/images/guide/transaction/introduction.png
 
 # Transactions
 
-It is possible to send very simple transaction in bitcoin which contain just one operation. This is how most wallets do it these days. One transaction for each payment.  This is not the most cost effective, or optimised way of handling onchain payments though.
+Unlike most other payment systems bitcoin does keep track of balances of accounts. Instead it uses something known as UTXOs. If you use an account based model then everyone can find your transacitons under one address — the UTXO model of bitcoin provides privacy advantages as it becomes a lot more difficult to link transactions together under a single account. The blockchain afterall is public.
 
-Since a transaction is able to take multiple inputs and outputs. You can eseentially allow users to build a transaction that contains multiple operations. Enter, batched payments.
+It is also possible to send very simple transaction in bitcoin which contains just one operation / payment. This is how most wallets do it these days. One transaction for each payment.  This is not the most cost effective, or optimised way of handling onchain payments though.
 
-A batched payment is a collection of operations that will all be sent out at the same time, effectivly in the same transaction. This has a potential for fee saving mechanism.
+Since a transaction is able to take multiple inputs (coins used to fund the transaction) and outputs (payments and change). You can eseentially allow users to build a transaction that contains multiple operations. Enter, batched payments.
+
+A batched transaction is a collection of payments that will all be sent out at the same time, effectivly in the same transaction. This has a potential for fee saving benefits, but is terrible for privacy as it makes it possible to link one identity with several payments on-chain.
+
+We only use this as an example because to make it easier to communicate the capabilities of an on-chain transaction.
 
 Below we explore the structure and lifecycle of an on-chain bitcoin transaction.
 
@@ -73,19 +77,23 @@ The time a transaction takes to get included in a block is dependent on the fee.
 
 #### [Signing](#)
 
-Each coin you include in a transaction 
+In order for a transaction to be valid and finalised — it needs to be signed. What is being signed is the bitcoin you funded the transaction with, and the payments you've added to the transaction (including the change).
+
+This can be done in the background and the user does not need to be individaully prompted every time the transaction gets funded or a payment added.
 
 ---
 
 #### [Broadcasting](#)
 
-Once the transaction has been funded, payments defined, and fee set, it is ready to — 
+Once the transaction has been funded, payments selected, and fee set, and signing is complete — its time to broadcast the transaction. The transaction needs to be sent to a node which is constnatly communicating to other nodes and miners the latest transactions they've received.
+
+At this point the transaction is not yet confirmed — we say the transaction is in the memory pool, or mempool for short.
 
 ---
 
 #### [Speeding Up / Canceling](#)
 
-...
+While in the mempool — its possible to speed up the transaction or even cancel it. Not all transactions can do this — an option called "Replace by Fee" needs to be turned on before the transaction is broadcasted.
 
 ---
 
@@ -103,5 +111,6 @@ A transaction can be collaboratively built (for example joint accounts / multisi
 
 #### [Spending Conditions](#)
 
-...
+- Timelock
+- Multi-Signature
 
