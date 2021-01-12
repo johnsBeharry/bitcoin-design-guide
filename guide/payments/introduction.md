@@ -21,7 +21,7 @@ image: /assets/images/payments/introduction.png
 
 # Payments
 
-There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services like Ali Pay, Cash App, PayPal, Strike, or Monzo.
+There are limitations in the current financial system that make payment services inaccessible to people in many places of the world — not everyone has access to bank accounts, identification, proof of address or are in countries which support the use of modern financial services.
 
 ## Bitcoin is money
 
@@ -55,6 +55,8 @@ Even though all transactions are stored publicly, there is no personally identif
 
 We should inform our users of these risks but also provide mechanisms that help them gain an acceptable amount of privacy[^1].
 
+<<<<<<< HEAD
+
 ## Bitcoin is not too slow for payments
 
 Transactions made on-chain can take minutes or days to confirm — depending on the fee you pay. This is because they get secured by the entire network of nodes and miners which exchange transactions they receive from wallets and other services with each other. Every 10 minutes miners validate the payments within the transactions and publish a block. For this service, they typically take the transactions with the highest fees.
@@ -75,10 +77,10 @@ This is known as a payment channel, Lightning is essentially a network of paymen
 
 Instead of recording each payment as an on-chain transaction to be secured in a block, they instead keep track of the balance at each side of the payment channel. The two parties only need to make a final settlement on-chain if that relationship ends and they want to "close" the channel which would unlock the balance on their side of the payment channel on-chain.
 
-Lighting payments gains us some privacy since the payments are not individually recorded on-chain in a transaction only the final settlement is.
+Lighting payments gain us some privacy since the payments are not individually recorded on-chain in a transaction, only the final settlement is.
 
 #### Who to open a payment channel with?
 
-Its possible to connect two computers together to share files or even make calls between themselves without the internet — but if you want to communicate someone outside of this network you would go to a Telcom (ISP) to get a connection to the global information network. The same with lightning — you can connect to a Lightning Service Provider (LSP) which would provide you access to a larger network of payment channels, a global payment network.
+It's possible to connect two computers to share files or even make calls between themselves without the internet — but if you want to communicate with someone outside of this network, you would have to go to a Telcom (ISP) to get a connection to the global information network. The same with lightning — you can connect to a Lightning Service Provider (LSP) which would provide you access to a larger network of payment channels, a global payment network.
 
 [^1]: https://bitcoin.org/en/protect-your-privacy
