@@ -23,7 +23,7 @@ image: /assets/images/guide/transaction/introduction.png
 
 # Requesting Payments
 
-**Payment Requests** hold the information a wallet requires to make a bitcoin payment. Whether on-chain or lightning, a payment request does not represent an account. Instead, think of it as an invoice, and ideally, recipients should only use payment requests once.
+**Payment Requests** hold the information a bitcoin application requires to make a payment. Whether on-chain or lightning, a payment request does not represent an account. Instead, think of it as an invoice, and ideally, recipients should only use payment requests once.
 
 Whether you are making an On-chain or Lightning Payment, the user flow is typically the same.The receiver generates a payment request, shares it with the payer via some out-of-band method (QR code, text message, etc.), then the payer approves the payment in their wallet.
 
@@ -129,7 +129,7 @@ A payment request should ideally be a BIP21 URI or BOLT11 lightning invoice with
 3. Web Link
    1. Deep linking
 
-## Methods to transport a Payment Request
+## How to share a Payment Request
 
 ### At a distance (has contact information)
 
